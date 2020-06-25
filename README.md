@@ -1,0 +1,1 @@
+# so-taller-kabre-openmp-i
