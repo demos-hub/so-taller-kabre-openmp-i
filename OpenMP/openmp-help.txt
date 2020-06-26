@@ -1,4 +1,4 @@
-/* compilation: gcc exercice1.c -o out -fopenmp */
+/* compilation: gcc exercise1.c -o out -fopenmp */
 
 /* ===========================PRAGMAS=======================*/
 
