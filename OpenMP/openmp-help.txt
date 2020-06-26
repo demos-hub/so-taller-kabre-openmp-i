@@ -1,0 +1,61 @@
+/* compilation: gcc exercice1.c -o out -fopenmp */
+
+/* ===========================PRAGMAS=======================*/
+
+/* Clauses: */
+/* private, firstprivate, default, shared, copyin, reduction*/
+
+
+/* DEFINE THE PARALLEL SECTION */
+#pragma omp parallel [clauses]
+// #pragma omp parallel private(n, m) /*n and m are variables*/
+
+
+/* DEFINE PARALLEL FOR LOOP */
+#pragma omp parallel for [clauses]
+
+
+/* DEFINE PARALLEL SECTIONS*/
+#pragma omp parallel sections
+
+
+/* SPECIFY A PARALLEL SECTION*/
+#pragma omp section
+
+
+/* OPERATION TO A VARIABLE */
+#pragma omp parrallel for reduction([+/-/*]:variable)
+
+
+/* DEFINE A CRITICAL SECTION - ASSERT MUTUAL EXCLUSION*/
+#pragma omp critical
+
+
+/* DEFINE A CRITICAL ATOMIC OPERATION*/
+#pragma omp atomic
+
+
+/* MASTER THREAD WAITS FOR ALL THREADS*/
+#pragma omp barrier
+
+
+/* ===========================RUTINES=======================*/
+
+
+/* SET THE NUMBER OF THREADS */
+void omp_set_num_threads(int num_threads);
+
+/* GETS NUMBER OF THREADS IN THE CURRENT TEAM*/
+int omp_get_num_threads(void);
+
+/* GETS ELAPSED WALL CLOCK TIME IN SECONDS */
+double omp_get_wtime(void);
+
+/* RETURN THE MAXIMUM NUMBER OF THREADS - DEFAULT: LOGICAL THREADS */
+int omp_get_max_threads();
+
+
+/* =================ENVIRONMENT VARIABLES=======================*/
+
+
+
