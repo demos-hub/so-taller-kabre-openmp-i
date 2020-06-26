@@ -1,0 +1,11 @@
+
+/*Installation*/
+sudo apt-get install openmpi-bin openmpi-common openssh-client openssh-server libopenmpi1.3 libopenmpi-dbg libopenmpi-dev
+
+
+/* COMPILATION */
+mpicc demo.c -o demo
+
+
+/* Execution */
+mpiexec -np 2 ./demo
